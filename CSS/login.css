@@ -1,0 +1,97 @@
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Main container for the login form */
+.login-container {
+    background-color: #e1e6ee; /* White background */
+    padding: 2rem; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(61, 103, 202, 0.1); /* Light shadow for depth */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width to center the container */
+}
+
+/* Styling for the form heading */
+h1 {
+    text-align: center; /* Centered text */
+    color: #333; /* Dark gray color */
+}
+
+/* Styling for labels */
+label {
+    display: block; /* Block display to ensure new line */
+    margin-bottom: 0.5rem; /* Space below each label */
+    color: #080c3c; /* Gray color */
+}
+
+/* Styling for input fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width input */
+    padding: 0.5rem; /* Padding inside the input */
+    margin-bottom: 1rem; /* Space below each input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Styling for the checkbox label */
+input[type="checkbox"] {
+    margin-right: 0.5rem; /* Space to the right of the checkbox */
+}
+
+/* Styling for the submit button */
+button {
+    width: 100%; /* Full width button */
+    padding: 0.75rem; /* Padding inside the button */
+    background-color: #2788f1; /* Blue background */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    color: #fff; /* White text */
+    font-size: 1rem; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the forgot password link */
+a {
+    display: block; /* Block display to ensure new line */
+    text-align: center; /* Centered text */
+    margin-top: 1rem; /* Space above the link */
+    color: #007BFF; /* Blue color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Input error state */
+input.error {
+    border-color: red;
+}
+
+/* Input success state */
+input.success {
+    border-color: green;
+}
+
+

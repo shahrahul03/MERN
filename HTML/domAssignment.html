@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/domAssignment.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+            <div class="main-div"> 
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <input type="text" id="search-bar" placeholder="Search books...">
+        <button onclick="searchBook()">Search</button>
+        <button onclick="clearSearchHighlights()">Clear Search Highlights</button>
+        <ul id="book-list">
+            <!-- Books will be listed here -->
+        </ul> <br>
+        <!-- <input type="text" id="new-book-title" placeholder="New book title"> -->
+        <button onclick="addBook()">Add Book</button>
+        <button onclick="removeBook()">Remove Last Book</button>
+    </main>
+
+    <script src="../js/domAssignment.js">
+        
+    </script>
+</body>
+</html>

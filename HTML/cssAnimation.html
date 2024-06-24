@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css animation</title>
+
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+          /**  transition: width 2s, height 2s, background-color 2s;**/
+          animation: cardAnimate 2s infinite;
+        }
+
+       /** div:hover{
+            background-color: blue;
+            /** transform: scale(1.5); 
+            width: 150px;
+            height: 200px;
+            
+        }
+        **/
+
+        @keyframes cardAnimate {
+
+from{
+    background-color: red;
+}
+to{
+    background-color: blue;
+}
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                    }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>css animation</h1>
+    </div>
+</body>
+</html>

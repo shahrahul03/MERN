@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-div .left,
+.header-div .right {
+    display: flex;
+    align-items: center;
+}
+
+.header-div .left .circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-right: 10px;
+}
+
+.header-div .left .circle i {
+    font-size: 20px;
+    color: #121111;
+    
+}
+.header-div .left a{
+    padding: 2px 4px;
+    border: 2px solid black;
+    border-radius: 11px;
+}
+
+.header-div a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.header-div .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header-div .center h2 {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+}
+
+#tooth-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+#tooth-icon i {
+    color: #fff;
+    font-size: 16px;
+}
+
+#signup-button{
+    margin-left: 10px;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 11px;
+    
+}
+#login-button{
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 11px;
+    
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:none;
+    padding: 0 20px;
+    height: 35px;
+    flex-wrap: nowrap;
+   
+    
+}
+
+.footer-div h3 {
+    margin: 0;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social_media-logo {
+    display: flex;
+    gap: 10px;
+    
+    margin-bottom: 5px; /* Adjust margin to control space between icons and h3 */
+    
+    /* flex-flow: column; */
+}
+.media-icon{
+    background-color: orangered;
+    border-radius: 10px;
+    padding: 3px;
+    color: white;
+    
+}
+
+.h3-startup-year {
+    text-align: right;
+    margin: 0;
+}
+
+/* main div */
+.main-div {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 83vh; /* Set the height  of the viewport height */
+    width: 100%;
+    
+}
+.main-div{
+    display: grid;
+}
+
+.content {
+    margin: 10px;
+    transition: all 0.5s ease;
+    grid-area: 1/4;
+    
+   
+}
+
+.content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    
+   
+}
+.content-img1{
+    rotate: 10deg;
+
+}
+.content-img2{
+    rotate: -10deg;
+
+}
+.content-img3{
+    rotate: -20deg;
+
+}
+.content-img4{
+    rotate: -30deg;
+
+}
+
+.content h1 {
+    cursor: pointer;
+
+}
+.content:hover {
+    transform: translateY(20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #e0f7f7;
+    border-color: #0a6969;
+    
+    position: absolute;
+   
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease;
+    
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header-div h2 {
+        font-size: 20px;
+    }
+
+    .header-div a {
+        font-size: 14px;
+    }
+
+    .header-div .left .circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-div .left .circle i {
+        font-size: 16px;
+    }
+    
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<Head>
+    <meta charset="UTF-8">
+    <meta name ="author" content=" Rahul kumar shah">
+    <meta name = "description" content="This is simple HTML5 page!>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- to select id # is used -->
+    <!-- internal styling -->
+    <style>
+        #lorem{
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background-color: azure;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .heading{
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background-color: azure;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+
+        }
+        #person {
+            border: 3px solid rgb(189, 173, 108);
+            border-collapse: collapse;
+            background-color: aquamarine;
+            width: 30%;
+          
+         
+          }
+          
+
+    </style>
+    
+    <link rel="stylesheet"  href="lesson.css">  
+</Head>
+<body>
+    <H1 style=color:blueviolet>hello world</H1>
+    <h2 id="hi">hello world</h2>
+    <h3 class="heading">hello world</h3>
+    <h4 class="heading">hello world</h4>
+    <h5 class ="heading">hello world</h5>
+    <h6 class="heading">hello world</h6>
+    <!-- empty tag br, hr, id is single selector and class is group selector -->
+    <p id="lorem"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Ex consequuntur illo beatae laboriosam repellendus quod numquam libero harum,<br> nihil hic inventore aspernatur quae a voluptas eligendi voluptatibus distinctio mollitia magnam.</p>
+    <hr>
+    <p id="lorem2">
+        ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur illo beatae laborios
+        am repellendus quod numquam libero harum, nihil hic inventore aspern
+        
+    </p>
+    <hr>
+    <img src="https://wallpapercave.com/wp/wp2555019.jpg"
+    alt="green image"
+    width="100%"
+    height="250px"
+    class ="green img">
+    <hr>
+    <pre>
+        fjljafkljljflj
+    </pre>
+
+    <!-- html attributes -->
+    <!-- html text formatting -->
+<p><b> This is bold text</b></p>
+<p><strong> this is strong text</strong></p>
+<P><em> this is emphasize text</em></P>
+<P><small> this is small text</small></P>
+<P><mark>this is highlighted text</mark></P>
+<p> my name is <del> Rahul</del> shah </p>
+<p> my name is <ins>Rahul</ins>shah</p>
+<p>this is example of superscript x<sup>2</sup></p>
+<p>this is example of subscripty<sub>2</sub></p>
+
+<!-- HTML Lists 1: order list, 2: unordered list -->
+<ul style = "list-style-type: circle;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+    </ul>
+<!-- 1,A,a,i,l, start can be used -->
+    <ol type ="A">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ol>
+    <ol type=start:5;>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+        </ol>
+
+        <!-- table tag -->
+        <table id="person" >
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+
+        </tr>
+        <tr>
+            <td>rahul</td>
+            <td>suraj</td>
+            <td>navin</td>
+        </tr>
+        <tr>
+            <td>shah</td>
+            <td>kumar</td>
+            <td>arrav</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+    </table>
+    <!-- audio  -->
+    <audio controls>
+        <source src="" type="audio/mp3"/>
+
+    </audio>
+
+    <!-- self study topic :thead,tbody, tfoot, rowspan and colspan, embeddig pdf files, google map and youtube video in html document (assignment 7) -->
+
+<!-- form tag -->
+<form>
+    <label for="fname"> FirstName</label><br/>
+    <input type="text" id="fname" name="fname"/><br/>
+    
+    <label for="lname"> LasttName</label><br/>
+    <input type="text" id="lname" name="lname"/><br/>
+    
+    <input type="submit" value="submit"/>
+</form>
+<form enctype="multipart/form-data">
+    <label for="fileUpload">Select a file:</label>
+    <input type="file" id="fileUpload">
+    <input type="submit" value="Upload" id="uploadButton">
+  </form>
+  
+<form>
+    <textarea rows="10" cols="30"></textarea>
+</form>
+<form>
+    <label for="gender">Gender:</label>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+  </form>
+  <form>
+  <select multiple>
+    <option value="1">one</option>
+    <option value="2">two</option>
+    <option value="3">three</option>
+
+  </select>
+</form>
+
+<!-- radio buttons -->
+<form>
+    <input type="radio" id="male" name="gender" value="male"/>
+    <label for="male">male</label><br/>
+    
+    <input type="radio" id="female" name="gender" value="female"/>
+    <label for="female">female</label><br/>
+    
+    <input type="radio" id="other" name="gender" value="other"/>
+    <label for="other">other</label><br/>
+    
+</form>
+<form>
+    <input type="checkbox" id="vehicle1" name="vehicle" value="car"> Car<br>
+<input type="checkbox" id="vehicle2" name="vehicle" value="bike"> Bike<br>
+<input type="checkbox" id="vehicle3" name="vehicle" value="airplane"> Airplane<br>
+
+</form>
+  <!-- attributes for form -->
+  <!-- attributes for form fields -->
+  <form>
+    <label for="fname"> FirstName</label><br/>
+    <input type="text" id="fname" name="fname" placeholder="enter your name"/><br/>
+    
+    <label for="lname"> LasttName</label><br/>
+    <input type="text" id="lname" name="lname" placeholder="enter your last name"/><br/>
+    
+    <input type="submit" value="submit"/>
+</form>
+
+  <form action="act_login.php" method="">
+    
+  </form>
+    
+</body>
+</html>
+

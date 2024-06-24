@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners Example</title>
+    <style>
+        #mouseoverText {
+            display: none;
+            color: blue;
+        }
+    </style>
+    <script>
+        // Function to execute when the page loads
+        function pageLoad() {
+            alert("Page has finished loading");
+        }
+
+        // Function to execute when the input value changes
+        function inputChange() {
+            alert("Input value has been changed");
+        }
+
+        // Function to execute when the button is clicked
+        function buttonClick() {
+            alert("Button clicked");
+        }
+
+        // Function to execute when the mouse hovers over the text
+        function mouseOver() {
+            document.getElementById("mouseoverText").style.display = "block";
+        }
+
+        // Function to execute when the mouse moves out of the text
+        function mouseOut() {
+            document.getElementById("mouseoverText").style.display = "none";
+        }
+
+        // Function to execute when a key is pressed down
+        function keyDown(event) {
+            alert("Key pressed: " + event.key);
+        }
+    </script>
+</head>
+<body onload="pageLoad()">
+
+    <h1>Event Listeners Example</h1>
+ 
+    <input type="text" id="myInput" onchange="inputChange()" placeholder="Type something...">
+
+    <button onclick="buttonClick()">Click Me!</button>
+
+   <p onmouseover="mouseOver()" onmouseout="mouseOut()">Hover over this text</p>
+    <p id="mouseoverText">You are hovering over the text!</p>
+
+     <input type="text" id="keyInput" onkeydown="keyDown(event)" placeholder="Press any key..."> 
+
+</body>
+</html>

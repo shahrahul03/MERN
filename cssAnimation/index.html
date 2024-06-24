@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        section {
+            margin: 20px 0;
+        }
+
+        /* 1. Animated Button Hover Effect */
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 2. Pulsating Circle */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* 3. Bouncing Ball Animation */
+        .container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 1px solid #000;
+        }
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            animation: bounce 2s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { top: 0; }
+            50% { top: 150px; }
+        }
+
+        /* 4. Fade-In Image Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            animation: fadeIn 15s forwards;
+            
+        }
+        .gallery img:nth-child(1) { animation-delay: 0.5s; }
+        .gallery img:nth-child(2) { animation-delay: 1s; }
+        .gallery img:nth-child(3) { animation-delay: 1.5s; }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* 5. Sliding Text Marquee */
+        .marquee {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            background: #333;
+            color: #fff;
+        }
+        .marquee p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* 6. Rotating Card */
+        .card {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        .card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* 7. Loading Spinner */
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 8. Expanding Accordion Menu */
+        .accordion {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .accordion-header {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 18px;
+            text-align: left;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+        .accordion-header:hover {
+            background-color: #ccc;
+        }
+        .accordion-content {
+            display: none;
+            padding: 0 18px;
+            background-color: white;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .accordion-content p {
+            margin: 18px 0;
+        }
+
+        /* 9. Animated Progress Bar */
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            border-radius: 25px;
+            transition: width 1s;
+        }
+
+        /* 10. Animated Navigation Menu */
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-100%);
+        }
+        .menu.active {
+            transform: translateX(0);
+        }
+        .menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            background-color: #575757;
+        }
+        .open-menu {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. Animated Button Hover Effect -->
+<section>
+    <h2>Animated Button Hover Effect</h2>
+    <button class="button">Hover me</button>
+</section>
+
+<!-- 2. Pulsating Circle -->
+<section>
+    <h2>Pulsating Circle</h2>
+    <div class="circle"></div>
+</section>
+
+<!-- 3. Bouncing Ball Animation -->
+<section>
+    <h2>Bouncing Ball Animation</h2>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</section>
+
+<!-- 4. Fade-In Image Gallery -->
+<section>
+    <h2>Fade-In Image Gallery</h2>
+    <div class="gallery">
+        <img src="../img1.jpg" alt="Image 1">
+        <img src="../img1.jpg" alt="Image 2">
+        <img src="../img1.jpg" alt="Image 3">
+    </div>
+</section>
+
+<!-- 5. Sliding Text Marquee -->
+<section>
+    <h2>Sliding Text Marquee</h2>
+    <div class="marquee">
+        <p>This is a sliding text marquee that continuously slides from right to left across the screen.</p>
+    </div>
+</section>
+
+<!-- 6. Rotating Card -->
+<section>
+    <h2>Rotating Card</h2>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                Front Content
+            </div>
+            <div class="card-back">
+                Back Content
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Loading Spinner -->
+<section>
+    <h2>Loading Spinner</h2>
+    <div class="spinner"></div>
+</section>
+
+<!-- 8. Expanding Accordion Menu -->
+<section>
+    <h2>Expanding Accordion Menu</h2>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-header">Section 1</button>
+            <div class="accordion-content">
+                <p>Content for section 1.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Section 2</button>
+            <div class="accordion-content">
+                <p>Content for section 2.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Section 3</button>
+            <div class="accordion-content">
+                <p>Content for section 3.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 9. Animated Progress Bar -->
+<section>
+    <h2>Animated Progress Bar</h2>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+</section>
+
+<!-- 10. Animated Navigation Menu -->
+<section>
+    <h2>Animated Navigation Menu</h2>
+    <span class="open-menu" onclick="toggleMenu()">☰ Open Menu</span>
+    <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</section>
+
+<script>
+    // 8. Expanding Accordion Menu Script
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+            button.classList.toggle('active');
+
+            if (button.classList.contains('active')) {
+                document.querySelectorAll('.accordion-header').forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.classList.remove('active');
+                        otherButton.nextElementSibling.style.display = 'none';
+                    }
+                });
+                accordionContent.style.display = 'block';
+            } else {
+                accordionContent.style.display = 'none';
+            }
+        });
+    });
+
+    // 9. Animated Progress Bar Script
+    function setProgress(percentage) {
+        const progressBar = document.getElementById('progress-bar');
+        progressBar.style.width = percentage + '%';
+    }
+    setProgress(75); // Change the percentage here
+
+    // 10. Animated Navigation Menu Script
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

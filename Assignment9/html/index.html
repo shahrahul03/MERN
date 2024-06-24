@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .login-form{
+            justify-content: center;
+            display: flex;
+        }
+        .main-div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 2px solid green;
+            flex-direction: column;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            
+        }
+        .login-form label{
+            padding: 5px;
+            margin: 4px;
+            margin-bottom: 5px;
+            font-family: 'Times New Roman', Times, serif;
+           
+            
+
+        }
+        .login-form input{
+            padding-top: 10px;
+            margin-top: 10px;
+            border: 2px solid green;
+            border-radius: 20px;
+        }
+        .login-form button{
+            margin-top: 10px;
+            color: blue;
+            padding: 4px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurant </h1>
+        <hr>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <hr>
+        <div class="hero">
+           
+            <img src="../images/hero.jpg" alt="Hero Image">
+        </div>
+
+        <section class="introduction">
+            <h2>Welcome to Our Restaurant</h2>
+            <p>Come experience the finest dining with our exceptional service and exquisite dishes.</p>
+        </section>
+        <h2 id ="featues-heading">Our Special Features</h2>
+
+        <div class="features">
+            
+            <div class="features-dvi">
+                <h3>Gourmet Cuisine</h3>
+                <img class = "img-div" src="../images/features1.jpg" alt="img ">
+            </div>
+            <div class="features-dvi">
+                <h3>Cozy Ambiance</h3>
+                <img class = "img-div" src="../images/2.jpg" alt="Dish 2">
+            </div>
+            <div class="features-dvi">
+                <h3>Live Music</h3>
+                <img class = "img-div" src="../images/2.jpg" alt="Dish 2">
+            </div>
+            <div class="features-dvi">
+                <h3>Outdoor Seating</h3>
+                <img class = "img-div" src="../images/2.jpg" alt="Dish 2">
+            </div>
+            
+            
+        </div>
+
+        <form class="login-form">
+            <div class="main-div">
+                <h1>Login</h1>
+                <div>
+                    <label for="username">username</label> <br>
+                    <input type="text" value="" name="username"><br>
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" value="" name="password" required><br>
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurant Name</p>
+    </footer>
+</body>
+</html>
